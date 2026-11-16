@@ -1,0 +1,240 @@
+/* ============ BASE ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #121212;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(18, 18, 18, 0.92);
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: #bdbdbd;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffb347;
+}
+
+/* ============ HEADER ============ */
+.header {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px;
+  background: linear-gradient(160deg, #2b1d12 0%, #121212 70%);
+}
+
+.header-tag {
+  font-size: 14px;
+  color: #ffb347;
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.header-text {
+  max-width: 520px;
+  color: #bdbdbd;
+  margin-bottom: 32px;
+}
+
+.btn {
+  background: #ffb347;
+  color: #121212;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ============ SECCIONES ============ */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  color: #bdbdbd;
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
+/* ============ GALERÍA ============ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.photo {
+  position: relative;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo figcaption {
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+/* Colores de ejemplo: se reemplazan al poner tus fotos */
+.photo-1 { background: linear-gradient(135deg, #ff9966, #ff5e62); }
+.photo-2 { background: linear-gradient(135deg, #5f7a61, #1f3a2b); }
+.photo-3 { background: linear-gradient(135deg, #141e30, #35577d); }
+.photo-4 { background: linear-gradient(135deg, #614385, #516395); }
+.photo-5 { background: linear-gradient(135deg, #f6d365, #e0813a); }
+.photo-6 { background: linear-gradient(135deg, #d4a373, #8d5a2b); }
+
+/* ============ SOBRE MÍ ============ */
+.about {
+  border-top: 1px solid #2a2a2a;
+}
+
+.facts {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.facts li {
+  color: #bdbdbd;
+}
+
+.facts strong {
+  display: block;
+  font-size: 2.4rem;
+  color: #ffb347;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background: #0b0b0b;
+  border-top: 1px solid #2a2a2a;
+  padding: 48px 40px 24px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+}
+
+.footer-logo {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer-small {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+.copyright {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #2a2a2a;
+  font-size: 13px;
+  color: #777;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
